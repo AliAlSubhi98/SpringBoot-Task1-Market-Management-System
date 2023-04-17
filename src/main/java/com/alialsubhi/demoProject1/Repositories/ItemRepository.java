@@ -1,4 +1,10 @@
 package com.alialsubhi.demoProject1.Repositories;
 
-public interface ItemRepository {
+import com.alialsubhi.demoProject1.Models.Item;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface ItemRepository extends JpaRepository<Item, Long> {
+
 }
