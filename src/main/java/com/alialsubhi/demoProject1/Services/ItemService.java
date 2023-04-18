@@ -16,4 +16,8 @@ public class ItemService {
     public List<Item> getAllItems() {
         return itemRepository.findAll();
     }
+
+    public Item getItemById(long id){
+        return itemRepository.findById(id).get();
+    }
 }

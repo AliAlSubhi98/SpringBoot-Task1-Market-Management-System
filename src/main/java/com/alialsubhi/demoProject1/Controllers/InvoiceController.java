@@ -1,12 +1,10 @@
 package com.alialsubhi.demoProject1.Controllers;
 
+import com.alialsubhi.demoProject1.Models.Customer;
 import com.alialsubhi.demoProject1.Models.Invoice;
 import com.alialsubhi.demoProject1.Services.InvoiceService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -19,5 +17,10 @@ InvoiceService invoiceService;
     @RequestMapping(value = "getAll", method = RequestMethod.GET)
     public List<Invoice> getAllInvoices() {
         return invoiceService.getAllInvoices();
+    }
+
+    @GetMapping(value = "getById")
+    public Invoice getInvoiceById(@RequestParam long id) {
+        return invoiceService.getInvoiceById(id);
     }
 }
