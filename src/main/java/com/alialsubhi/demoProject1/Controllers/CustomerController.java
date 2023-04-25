@@ -36,6 +36,10 @@ public class CustomerController {
     @GetMapping(value = "getByAgeGreaterThan/{age}")
     public List<Customer> findByAgeGreaterThan(@PathVariable int age){
         return customerService.findByAgeGreaterThan(age);
-    }
+    }//http://localhost:8080/Customer/getByAgeGreaterThan/1
+@GetMapping(value = "getByFullName/{firstName}/{lastName}")
+    public List<Customer> findByFullName(@PathVariable String firstName, @PathVariable String lastName){
+        return customerService.findByFullName(firstName,lastName);
+    }//http://localhost:8080/Customer/getByFullName/ali/alsubhi
 
 }

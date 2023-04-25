@@ -31,4 +31,8 @@ public class CustomerService {
     public List<Customer> findByAgeGreaterThan(int age){
         return customerRepository.findByAgeGreaterThan(age);
     }
+
+    public List<Customer> findByFullName(String firstName, String lastName){
+        return customerRepository.findByFullName(firstName,lastName);
+    }
 }
