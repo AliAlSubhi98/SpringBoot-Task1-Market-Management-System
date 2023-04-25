@@ -29,7 +29,13 @@ public class CustomerController {
         return customerService.getCustomersWithLastName();
     }
     @GetMapping(value = "getWithEmail")
-    public List<Customer> getCustomersWithEmailContainingExampleAtGmailDotCom() {
-        return customerService.getCustomersWithEmailContainingExampleAtGmailDotCom();
+    public List<Customer> getCustomersWithEmailContainingExampleAtGmailDotCom(String email) {
+        email="nidhal@gmail";
+        return customerService.getCustomersWithEmailContainingExampleAtGmailDotCom(email);
     }
+    @GetMapping(value = "getByAgeGreaterThan/{age}")
+    public List<Customer> findByAgeGreaterThan(@PathVariable int age){
+        return customerService.findByAgeGreaterThan(age);
+    }
+
 }

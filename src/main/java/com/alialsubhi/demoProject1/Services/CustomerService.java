@@ -24,7 +24,11 @@ public class CustomerService {
         return customerRepository.findByLastName("ali");
     }
 
-    public List<Customer> getCustomersWithEmailContainingExampleAtGmailDotCom() {
-        return customerRepository.findByEmailContaining("ali@gmail");
+    public List<Customer> getCustomersWithEmailContainingExampleAtGmailDotCom(String email) {
+        return customerRepository.findByEmailContaining(email);
+    }
+
+    public List<Customer> findByAgeGreaterThan(int age){
+        return customerRepository.findByAgeGreaterThan(age);
     }
 }

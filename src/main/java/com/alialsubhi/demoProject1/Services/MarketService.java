@@ -19,5 +19,6 @@ public class MarketService {
 
     public Market getMarketById(long id){
         return marketRepository.findById(id).get();
+
     }
 }

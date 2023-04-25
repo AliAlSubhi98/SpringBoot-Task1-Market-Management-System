@@ -14,4 +14,8 @@ public interface CustomerRepository extends JpaRepository<Customer, Long> {
 
     @Query("SELECT c FROM Customer c WHERE c.email LIKE %:email%")
     List<Customer> findByEmailContaining(@Param("email") String email);
+
+    @Query(value = "SELECT * FROM customers WHERE age > ?1", nativeQuery = true)
+    List<Customer> findByAgeGreaterThan(int age);
+
 }
