@@ -17,6 +17,6 @@ public class Customer {
     long id;
 
     String firstName;
-    String LastName;
+    String lastName;
     String email;
 }

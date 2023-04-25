@@ -24,4 +24,12 @@ public class CustomerController {
     public Customer getCustomerById(@RequestParam long id) {
         return customerService.getCustomerById(id);
     }
+@GetMapping(value = "getWithLastName")
+    public List<Customer> getCustomersWithLastName() {
+        return customerService.getCustomersWithLastName();
+    }
+    @GetMapping(value = "getWithEmail")
+    public List<Customer> getCustomersWithEmailContainingExampleAtGmailDotCom() {
+        return customerService.getCustomersWithEmailContainingExampleAtGmailDotCom();
+    }
 }

@@ -1,5 +1,6 @@
 package com.alialsubhi.demoProject1;
 
+import com.alialsubhi.demoProject1.Controllers.CustomerController;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

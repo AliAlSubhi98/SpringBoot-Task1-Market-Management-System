@@ -20,4 +20,11 @@ public class CustomerService {
         return customerRepository.findById(id).get();
     }
 
+    public List<Customer> getCustomersWithLastName() {
+        return customerRepository.findByLastName("ali");
+    }
+
+    public List<Customer> getCustomersWithEmailContainingExampleAtGmailDotCom() {
+        return customerRepository.findByEmailContaining("ali@gmail");
+    }
 }
